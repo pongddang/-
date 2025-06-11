@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>친구와 함께하는 활동 선택기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>친구와 뭐하지?</h1>
+            <p>오늘은 무엇을 하면서 놀까요?</p>
+        </header>
+
+        <main>
+            <div class="mood-section">
+                <h2>오늘의 분위기는?</h2>
+                <div class="mood-buttons">
+                    <button class="mood-btn" data-mood="energetic">활기찬</button>
+                    <button class="mood-btn" data-mood="relaxed">여유로운</button>
+                    <button class="mood-btn" data-mood="creative">창의적인</button>
+                    <button class="mood-btn" data-mood="adventurous">모험적인</button>
+                    <button class="mood-btn" data-mood="all">모든 활동</button>
+                </div>
+            </div>
+
+            <div class="weather-section">
+                <h2>오늘의 날씨는?</h2>
+                <div class="weather-buttons">
+                    <button class="weather-btn" data-weather="sunny">맑음</button>
+                    <button class="weather-btn" data-weather="rainy">비</button>
+                    <button class="weather-btn" data-weather="cold">추움</button>
+                    <button class="weather-btn" data-weather="hot">더움</button>
+                    <button class="weather-btn" data-weather="any">상관없음</button>
+                </div>
+            </div>
+
+            <div class="people-section">
+                <h2>몇 명이서 놀까요?</h2>
+                <div class="people-input">
+                    <button class="people-btn" data-people="2">둘이서</button>
+                    <button class="people-btn" data-people="3-4">3-4명</button>
+                    <button class="people-btn" data-people="5+">5명 이상</button>
+                    <button class="people-btn" data-people="any">상관없음</button>
+                </div>
+            </div>
+
+            <div class="custom-section">
+                <h2>직접 활동 추가하기</h2>
+                <div class="custom-input">
+                    <input type="text" id="activity-input" placeholder="새로운 활동을 입력하세요">
+                    <button id="add-btn">추가</button>
+                </div>
+                <div class="activity-list-container">
+                    <h3>내가 추가한 활동</h3>
+                    <ul id="custom-activities"></ul>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <button id="generate-btn">활동 추천받기</button>
+                <div id="result">
+                    <div class="activity-card">
+                        <p class="placeholder">여기에 추천 활동이 표시됩니다</p>
+                    </div>
+                </div>
+                <button id="more-btn" class="more-btn">다른 활동 보기</button>
+            </div>
+        </main>
+
+        <div id="activity-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-popup">&times;</span>
+                <h2 id="popup-title"></h2>
+                <div id="popup-description"></div>
+                <div class="popup-info">
+                    <div id="popup-mood"></div>
+                    <div id="popup-weather"></div>
+                    <div id="popup-people"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 친구와 함께하는 활동 선택기</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
